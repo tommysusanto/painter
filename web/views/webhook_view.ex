@@ -4,7 +4,7 @@ defmodule HerokuPainterStarter.WebhookView do
   def render("success.json",_)do
     %{
         "speech" => "speech",
-        "displayText" => "speech",
+        "displayText" => "test",
         #"data": {},
         # "contextOut": [],
         "source" => "apiai-onlinestore-shipping"
