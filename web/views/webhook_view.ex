@@ -1,13 +1,18 @@
 defmodule HerokuPainterStarter.WebhookView do
   use HerokuPainterStarter.Web, :view
 
-  def render("success.json",_)do
+  def render("interior.json",_)do
     %{
-        "speech" => "text",
-        "displayText" => "test",
+        # "speech" => "test",
+        # "displayText" => "test",
         #"data": {},
-        # "contextOut": [],
-        "source" => "apiai-onlinestore-shipping"
+        # "source" => "apiai-onlinestore-shipping",
+        "contextOut" => [%{"name" => "output1", "lifespan" => "5", "parameters" => %{"environment" => "interior"}}]
+    }
+  end
+
+  def render("nothing.json",_)do
+    %{
     }
   end
 end
