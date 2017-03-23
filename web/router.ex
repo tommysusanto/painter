@@ -16,7 +16,7 @@ defmodule HerokuPainterStarter.Router do
   scope "/", HerokuPainterStarter do
     pipe_through :browser # Use the default browser stack
 
-    get "/webhook", WebhookController, :index
+    post "/webhook", WebhookController, :index
   end
 
   # Other scopes may use custom stacks.
